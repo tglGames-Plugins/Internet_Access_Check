@@ -1,4 +1,4 @@
-# ReadMe
+# TGL Internet Access Check
 
 A simple internet access check plugin for Unity. We check if we can access internet and the speed of reaching it in kbps.
 Add [InternetCheck.cs](./Runtime/Scripts/InternetCheck.cs) to your scene, and it will start monitoring weather you are online.
