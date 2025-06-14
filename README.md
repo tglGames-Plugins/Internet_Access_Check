@@ -10,5 +10,8 @@ the variables allow you to decide how often you want to check accessing online.
 - ***endPointsToTest*** : What end points to test for internet. It is adviced to add your server's ping URL to this and any public urls you want to ping to confirm the access to internet.
 
 
-Interface [IInternetCheckResult.cs](./Runtime/Scripts/IInternetCheckResult.cs) allows you to add listener to detect status has changed.
+Abstract class [InternetCheckListener.cs](./Runtime/Scripts/InternetCheckListener.cs) allows you to add listener to detect status has changed.
+- ***StartListening*** : Call this if you are in a phase of your app, where you want to track internet status
+- ***StopListening*** : Call this if you are in a phase of your app, where you do not want to track internet status
+- ***UpdatedInternetStatus*** : this abstract method can be overritten to use as a source to detect the current status
 A sample script 'InternetCheckResult' is available to get an idea. How you deal with current status is up to you.
