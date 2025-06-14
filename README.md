@@ -15,3 +15,11 @@ Abstract class [InternetCheckListener.cs](./Runtime/Scripts/InternetCheckListene
 - ***StopListening*** : Call this if you are in a phase of your app, where you do not want to track internet status
 - ***UpdatedInternetStatus*** : this abstract method can be overritten to use as a source to detect the current status
 A sample script 'InternetCheckResult' is available to get an idea. How you deal with current status is up to you.
+
+## How to add this package?
+- Open unity package manaegr 
+- On top right, there is a button to add a package
+- add a git package (from git URL)
+- fill the Https link for the package, in this case, 'https://github.com/tglGames-Plugins/Internet_Access_Check.git'
+- Add
+The package will be added under 'TGL Internet Access Check' in packages, use as needed.
