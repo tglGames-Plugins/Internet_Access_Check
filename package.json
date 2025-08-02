@@ -1,11 +1,11 @@
 {
     "name": "com.tglgames.tgl-internet-access-check",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "displayName": "TGL Internet Access Check",
     "description": "This is an internet check package. This helps confirm if you are online",
     "author": {
         "name" : "Rishabh Jain",
-        "email" : "it.rishabh.jain@gmail.com",
+        "email" : "thegamelearner@gmail.com",
         "url" : "https://tglblog.vercel.app/"
      },
     "unity": "2019.1",
