@@ -10,6 +10,8 @@ on:
 
 jobs:
   call_reusable_deploy:
+    permissions:
+      contents: write
     uses: ./.github/workflows/reusable-deploy.yml
     with:
       source_branch: 'dev'
