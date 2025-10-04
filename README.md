@@ -1,7 +1,15 @@
 # TGL Internet Access Check
-
 A simple internet access check plugin for Unity. We check if we can access internet and the speed of reaching it in kbps.
+
+## Limitations
+Unknown as of now.
+
+## Use
 Add [InternetCheck.cs](./Runtime/Scripts/InternetCheck.cs) to your scene, and it will start monitoring weather you are online.
+Abstract class [InternetCheckListener.cs](./Runtime/Scripts/InternetCheckListener.cs) allows you to add listener to detect status has changed.
+
+### Configurations
+[InternetCheck.cs](./Runtime/Scripts/InternetCheck.cs):
 the variables allow you to decide how often you want to check accessing online.  
 - ***timeOutSeconds*** : how much time do we wait for all ping request before they time out
 - ***pingFrequencyOnline*** : when you are online, how often should we check for internet connectivity
@@ -10,10 +18,12 @@ the variables allow you to decide how often you want to check accessing online.
 - ***endPointsToTest*** : What end points to test for internet. It is adviced to add your server's ping URL to this and any public urls you want to ping to confirm the access to internet.
 
 
-Abstract class [InternetCheckListener.cs](./Runtime/Scripts/InternetCheckListener.cs) allows you to add listener to detect status has changed.
+[InternetCheckListener.cs](./Runtime/Scripts/InternetCheckListener.cs):
 - ***StartListening*** : Call this if you are in a phase of your app, where you want to track internet status
 - ***StopListening*** : Call this if you are in a phase of your app, where you do not want to track internet status
-- ***UpdatedInternetStatus*** : this abstract method can be overritten to use as a source to detect the current status
+- ***UpdatedInternetStatus*** : this *abstract* method can be overritten to use as a source to detect the current status
+
+### Sample
 A sample script 'InternetCheckResult' is available to get an idea. How you deal with current status is up to you.
 
 ## How to add this package?
