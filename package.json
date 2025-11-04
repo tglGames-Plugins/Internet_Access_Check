@@ -1,21 +1,23 @@
 {
-    "name": "com.tglgames.tgl-internet-access-check",
-    "version": "1.0.2",
-    "displayName": "TGL Internet Access Check",
-    "description": "This is an internet check package. This helps confirm if you are online",
-    "author": {
-        "name" : "Rishabh Jain",
-        "email" : "thegamelearner@gmail.com",
-        "url" : "https://tglblog.vercel.app/"
-     },
-    "unity": "2019.1",
-    "unityRelease": "0b5",
-    "documentationUrl": "",
-    "changelogUrl": "",
-    "licensesUrl": "https://opensource.org/license/apache-2-0",
-    "dependencies": { },
-   "keywords": [
-      "TGL",
-      "Internet Check"
-    ]
-  }
+  "name": "com.tglgames.tgl-internet-access-check",
+  "version": "1.0.3",
+  "displayName": "TGL Internet Access Check",
+  "description": "This is an internet check package. This helps confirm if you are online",
+  "author": {
+    "name" : "Rishabh Jain",
+    "email" : "thegamelearner@gmail.com",
+    "url" : "https://tglblog.vercel.app/"
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/@tglGames-Plugins" },
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "documentationUrl": "",
+  "changelogUrl": "",
+  "licensesUrl": "https://opensource.org/license/apache-2-0",
+  "dependencies": { },
+  "keywords": [
+    "TGL",
+    "Internet Check"
+  ]
+}
+
