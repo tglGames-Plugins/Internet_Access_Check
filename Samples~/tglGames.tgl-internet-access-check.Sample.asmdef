@@ -2,7 +2,7 @@
     "name": "tglGames.tgl-internet-access-check.Sample",
     "rootNamespace": "",
     "references": [
-        "GUID:64682bc5630ae44e7b87787d05508a17"
+        "tgl-internet-access-check.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
