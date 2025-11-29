@@ -1,6 +1,6 @@
 {
   "name": "com.tglgames.tgl-internet-access-check",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "displayName": "TGL Internet Access Check",
   "description": "This is an internet check package. This helps confirm if you are online",
   "author": {
