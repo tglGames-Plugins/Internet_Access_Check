@@ -1,0 +1,47 @@
+# Publish Unity Package Code
+# This GitHub Action workflow publishes your package to the GitHub Package Registry
+# It triggers ONLY when you push a new tag matching the pattern "v*.*.*"
+
+name: Publish to GitHub Packages
+
+on:
+  push:
+    tags:
+      - 'v*.*.*' # Triggers on tags like v1.0.0, v0.1.1, etc.
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js environment
+      # This step also configures .npmrc to authenticate with the GitHub Package Registry
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          # This is the registry we need to authenticate with
+          registry-url: 'https://npm.pkg.github.com/'
+          
+      # 3. Get the version number from the Git tag
+      # E.g., "refs/tags/v0.1.1" becomes "0.1.1"
+      - name: Get version from tag
+        run: echo "PACKAGE_VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+
+      # 4. Update the version in package.json
+      # This ensures the published package version matches the Git tag
+      - name: Update package.json version
+        run: npm version ${{ env.PACKAGE_VERSION }} --no-git-tag-version --allow-same-version
+        
+      # 5. Publish the package to GitHub Package Registry
+      # It uses the NODE_AUTH_TOKEN (set below) to authenticate
+      # It reads the "publishConfig" from your package.json to know the exact URL
+      - name: Publish to GitHub Package Registry
+        run: npm publish --access public --scope=@tglGames-Plugins  --auth-type=legacy
+        env:
+          # Use the NPM_TOKEN secret you created in your repository settings
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
