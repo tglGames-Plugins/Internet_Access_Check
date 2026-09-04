@@ -27,9 +27,4 @@ the variables allow you to decide how often you want to check accessing online.
 A sample script 'InternetCheckResult' is available to get an idea. How you deal with current status is up to you.
 
 ## How to add this package?
-- Open unity package manaegr 
-- On top right, there is a button to add a package
-- add a git package (from git URL)
-- fill the Https link for the package, in this case, 'https://github.com/tglGames-Plugins/Internet_Access_Check.git'
-- Add
-The package will be added under 'TGL Internet Access Check' in packages, use as needed.
+See [How to add this package](HowToAddPackage.md) for detailed instructions.
